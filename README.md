@@ -6,7 +6,7 @@ SimEvals measure the predictiveness of information content choices for a downstr
 
 
 <p align="center">
-<img src="assets/overview.png" height="400" width="600">
+<img src="assets/overview.png" height="300" width="600">
 </p>
 
 Our framework trains a SimEval agent for each choice of information content that the researcher intends to evaluate for a downstream use case. The researcher can then interpret the test set accuracy of each SimEval agent as a measure of the predictiveness of that information content.
