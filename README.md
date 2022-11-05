@@ -23,7 +23,7 @@ Before training any SimEval agents, we need to define certain use-case-specific 
 2. The base model family, which is the family of prediction models.
 3. A function that defines the defines a use case label, which is a ground truth label for the use case. This label corresponds to the correct answer for each question that a user must answer in the user study.
 
-The notebook for our running example is in here. [Link to a specific notebook]
+We define use-case-specific components of the counterfactual reasoning use case [here](https://github.com/valeriechen/simeval_tutorial/blob/main/notebooks/Step0_cfreasoning.ipynb).
 
 
 ## Step 1: Data generation 
@@ -31,21 +31,16 @@ The notebook for our running example is in here. [Link to a specific notebook]
 The goal of this step is to use the researcher’s choice of information
 content and use-case-specific components to generate a dataset to train and evaluate the agent. The dataset consists of observation and use case label pairs, where the information content defines what information is included in each observation. 
 
-
-We generate data that reflects if the LIME explanation was tested.. TODO
-
-The notebook for our running example is in here. [Link to a specific notebook]
+In this step, generate a dataset that reflects the information presented to a user in a user study, which would include the datapoint, model prediction, and LIME explanation. For more details, see notebook [here](https://github.com/valeriechen/simeval_tutorial/blob/main/notebooks/Step1_cfreasoning.ipynb).
 
 
 
 ## Step 2: Agent training
 
-
 After generating a dataset, the researcher trains an algorithmic agent (e.g.,
 a machine learning model) to predict the use case label for a given observation. The training process allows the algorithmic agent to implicitly learn relevant domain knowledge about the use case from labeled examples, even when the researcher does not have any knowledge a priori of how to predict the use case labels. 
 
-We show how to train an agent on the LIME explanation for this dataset: [Link to a specific notebook]
-
+We show how to train an agent for the generated dataset [here](https://github.com/valeriechen/simeval_tutorial/blob/main/notebooks/Step2_cfreasoning.ipynb).
 
 
 ## Step 3: Agent evaluation
@@ -53,7 +48,7 @@ We show how to train an agent on the LIME explanation for this dataset: [Link to
 The agent’s accuracy on these examples is a measure of the predictiveness of the information content for the use case: a relative higher accuracy is evidence that a particular type of information content is more useful. We note that the agent’s
 performance (i.e. test set accuracy) is not intended to be interpreted as the exact, anticipated human subject’s performance when given the same set of information content as the algorithmic agent. 
 
-We provide how to train an agent on the LIME explanation for this dataset:[Link to a specific notebook]
+This notebook show how to evaluate the agent: [here](https://github.com/valeriechen/simeval_tutorial/blob/main/notebooks/Step3_cfreasoning.ipynb).
 
 
 ## Citing SimEval
